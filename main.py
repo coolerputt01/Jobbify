@@ -115,14 +115,10 @@ def scrape_jobs():
         description_tag = card.find('p', class_="md:pl-5")
         job_desc = description_tag.get_text(strip=True)
 
-        salary_tag = card.find('span',class_="mr-1")
-        salary = f"NGN {salary_tag.get_text(strip=True)}"
-
         job_data = {
             'title': job_title,
             'link': job_link,
-            'description': f"{job_desc} | Description: {job_desc}",
-            'salary': salary
+            'description': f"{job_desc} | Description: {job_desc}"
         }
 
         job_list.append(job_data)

@@ -22,6 +22,8 @@ import json
 import base64
 # OS for os-based operations.
 import os
+# To generate a file.
+import tempfile
 
 # Telegram Bot credentials.
 API_TOKEN = os.getenv("API_TOKEN")
@@ -51,7 +53,9 @@ def get_driver():
     options.add_argument('--no-sandbox')
     # This fixes CI/CD container issues btw.
     options.add_argument('--disable-dev-shm-usage')
-
+    # I'm trying to prevent user session from clashing
+    user_data_dir = tempfile.mkdtemp()
+    options.add_argument(f"--user-data-dir={user_data_dir}")
     web_driver = webdriver.Chrome(
         service=service ,
         options = options

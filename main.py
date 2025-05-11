@@ -167,8 +167,8 @@ def send_job_updates():
         post_jobs_to_json_server(JSON_PATH,job_lists,headers)
         send_message_to_group(message)
 
-# Run code every 5 minutes.
-schedule.every(5).minutes.do(send_job_updates)
+# Run code every 30 minutes.
+schedule.every(30).minutes.do(send_job_updates)
 
 
 # Keeping it to run a loop on start.

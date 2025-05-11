@@ -5,7 +5,7 @@ import requests
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
-
+from webdriver_manager.chrome import ChromeDriverManager
 # BeautifulSoup is the library that is making the scraping possible.
 from bs4 import BeautifulSoup
 
@@ -46,7 +46,7 @@ headers = {
 # Get selenium headless browser up and running.
 def get_driver():
     options = Options()
-    service = Service(r"C:/Users/Coolerputt/Documents/chromedriver-win64/chromedriver.exe")
+    service = Service(ChromeDriverManager().install())
     options.headless = True
     options.add_argument('--no-sandbox')
     # This fixes CI/CD container issues btw.

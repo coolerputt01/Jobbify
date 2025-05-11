@@ -31,7 +31,7 @@ CHAT_ID = os.getenv("CHAT_ID")
 
 # Github Credentials.
 GTOKEN = os.getenv("GIT_TOKEN")
-G_URL = os.getenv("GIT_API_URL")
+G_URL = os.getenv("GIT_URL")
 REPO_OWNER = os.getenv("REPO_OWNER")
 REPO_NAME = os.getenv("REPO_NAME")
 FILE_PATH = os.getenv("FILE_PATH")

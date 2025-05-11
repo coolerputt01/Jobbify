@@ -30,8 +30,8 @@ jobs:
       env:
         API_TOKEN: ${{ secrets.API_TOKEN }}
         CHAT_ID: ${{ secrets.CHAT_ID }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        GITHUB_API_URL: ${{ secrets.GITHUB_API_URL }}
+        GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
+        GIT_URL: ${{ secrets.GIT_URL }}
         REPO_OWNER: ${{ secrets.REPO_OWNER }}
         REPO_NAME: ${{ secrets.REPO_NAME }}
         FILE_PATH: ${{ secrets.FILE_PATH }}

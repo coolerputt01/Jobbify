@@ -33,6 +33,7 @@ trio-websocket==0.12.2
 typing_extensions==4.13.2
 urllib3==1.26.20
 w3lib==2.3.1
+webdriver_manager
 websocket-client==1.8.0
 websockets==10.4
 wsproto==1.2.0

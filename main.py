@@ -50,6 +50,7 @@ def get_driver():
     options = Options()
     service = Service(ChromeDriverManager().install())
     options.headless = True
+    options.add_argument("--headless=new")
     options.add_argument('--no-sandbox')
     # This fixes CI/CD container issues btw.
     options.add_argument('--disable-dev-shm-usage')

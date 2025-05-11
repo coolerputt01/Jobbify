@@ -161,10 +161,9 @@ def send_job_updates():
         message = "No Available Jobs"
         send_message_to_group(message)
         return
-    
+    post_jobs_to_json_server(JSON_PATH,job_lists,headers)
     for jobs in job_lists:
         message = f"{jobs['title']} \n {jobs['description']} \n {jobs['link']}\n"
-        post_jobs_to_json_server(JSON_PATH,job_lists,headers)
         send_message_to_group(message)
 
 # Run code every 30 minutes.

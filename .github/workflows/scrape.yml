@@ -22,6 +22,9 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+        
+    - name: Kill existing Chrome processes
+      run: pkill -f chrome || true
 
     - name: Run Script
       env:

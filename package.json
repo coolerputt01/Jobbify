@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@jayanithu/readmi": "^2.3.2",
+    "readme-md-generator": "^1.0.0"
+  }
+}

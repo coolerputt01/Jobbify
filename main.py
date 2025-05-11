@@ -28,18 +28,18 @@ API_TOKEN = os.getenv("API_TOKEN")
 CHAT_ID = os.getenv("CHAT_ID")
 
 # Github Credentials.
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
-GITHUB_API_URL = os.getenv("GITHUB_API_URL")
+GTOKEN = os.getenv("GITHUB_TOKEN")
+G_URL = os.getenv("GITHUB_API_URL")
 REPO_OWNER = os.getenv("REPO_OWNER")
 REPO_NAME = os.getenv("REPO_NAME")
 FILE_PATH = os.getenv("FILE_PATH")
 
 # My JSON file-path.
-JSON_PATH = f"{GITHUB_API_URL}/repos/{REPO_OWNER}/{REPO_NAME}/contents/{FILE_PATH}"
+JSON_PATH = f"{G_URL}/repos/{REPO_OWNER}/{REPO_NAME}/contents/{FILE_PATH}"
 
 # Github header for writing and reading data from file on github.
 headers = {
-    "Authorization": f"token {GITHUB_TOKEN}",
+    "Authorization": f"token {GTOKEN}",
     "Accept": "application/vnd.github.v3+json",
 }
 
